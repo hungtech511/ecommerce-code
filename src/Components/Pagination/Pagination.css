@@ -1,0 +1,33 @@
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.pagination li a {
+  background: transparent;
+  color: #9990b8;
+  border: 2px solid #eaebec;
+  height: 60px;
+  width: 60px;
+  line-height: 56px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50%;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+}
+.pagination li a.active,
+.pagination li a:hover {
+  background: #fe4536;
+  color: #fff;
+  border-color: #fe4536;
+  box-shadow: 0 8px 16px 0 rgb(254 69 54 / 30%);
+}
+.pagination li a i {
+  vertical-align: middle;
+  font-size: 26px;
+}

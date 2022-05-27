@@ -1,0 +1,30 @@
+.countdown-item {
+  display: inline-block;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  line-height: 110px;
+  text-align: center;
+  font-weight: 500;
+  padding: 28px 0;
+  background: #fff;
+  margin-right: 15px;
+  -webkit-box-shadow: 0 16px 32px 0 rgb(224 226 255 / 30%);
+  box-shadow: 0 16px 32px 0 rgb(224 226 255 / 30%);
+}
+.countdown-item span {
+  font-size: 30px;
+  color: #10111e;
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+.countdown-item p {
+  font-size: 12px;
+  color: #747691;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}

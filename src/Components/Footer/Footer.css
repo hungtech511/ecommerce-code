@@ -1,0 +1,56 @@
+footer {
+  padding-top: 100px;
+}
+.footer-widget {
+  margin-bottom: 40px;
+}
+.footer-logo {
+  margin-bottom: 38px;
+}
+.footer-widget p {
+  color: #747691;
+  margin-bottom: 15px;
+}
+.footer-widget .footer-time {
+  display: flex;
+  margin-top: 30px;
+}
+.time-icon {
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.footer-widget h3 {
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1;
+  text-transform: capitalize;
+}
+.footer-link li {
+  margin-bottom: 15px;
+}
+.footer-link li a {
+  color: #747691;
+  font-size: 14px;
+}
+.footer-link li a:hover {
+  color: #fe4536;
+}
+.footer-bottom {
+  border-top: 1px solid #d1d2dd;
+  padding: 30px 0;
+}
+.copyright p {
+  margin-bottom: 0;
+  color: #747691;
+}
+.copyright p a {
+  color: #fe4536;
+}
+.footer-icon a {
+  color: #b9bad4;
+  margin-left: 20px;
+  font-size: 16px;
+}
+.footer-icon a:hover {
+  color: #fe4536;
+}

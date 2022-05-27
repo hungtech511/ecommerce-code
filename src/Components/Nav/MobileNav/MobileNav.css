@@ -1,0 +1,74 @@
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transform-origin: right center;
+  z-index: 17;
+  visibility: hidden;
+}
+.mobile-nav .mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0;
+  cursor: pointer;
+  transform: translateX(-100%);
+  transform-origin: right center;
+  transition: all 0.5s;
+}
+.mobile-nav .mobile-nav-content {
+  transition: all 0.8s;
+  transition-delay: 1s;
+  width: 300px;
+  transform: translateX(-200%);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  z-index: 10;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.mobile-nav.expanded {
+  opacity: 1;
+  visibility: visible;
+}
+.mobile-nav.expanded .mobile-nav-overlay {
+  transform: translateX(0%);
+  opacity: 0.5;
+}
+.mobile-nav.expanded .mobile-nav-content {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+.mobile-nav-content .mobile-logo {
+  margin-bottom: 40px;
+}
+.mobile-list li {
+  margin-bottom: 25px;
+}
+.mobile-list li a {
+  font-weight: 500;
+}
+.mobile-list li a.active {
+  color: #fe4536;
+}
+.mobile-nav .header-right {
+  float: left;
+  margin: 0;
+}
+.mobile-nav .header-right ul li {
+  margin: 0;
+  margin-right: 10px;
+}

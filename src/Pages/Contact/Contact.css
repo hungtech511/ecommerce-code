@@ -1,0 +1,51 @@
+.contact-form input {
+  background: #fff;
+  height: 80px;
+  padding: 0 30px 0 80px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 0;
+  color: #aab5ca;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  outline: none;
+  margin-bottom: 30px;
+}
+.contact-form textarea {
+  height: 300px;
+  padding: 30px 80px;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-family: Rubik, sans-serif;
+  color: #756563;
+  font-weight: 500;
+}
+.form-box {
+  position: relative;
+}
+.form-box:before {
+  position: absolute;
+  content: "\f0e0";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 700;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  left: 45px;
+  color: #756563;
+  top: 35px;
+  z-index: 10;
+}
+.user-icon::before {
+  content: "\f007";
+}
+.phone-icon::before {
+  content: "\f095";
+}
+.subject-icon:before {
+  content: "\f0a6";
+}

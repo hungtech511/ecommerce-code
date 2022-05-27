@@ -1,0 +1,21 @@
+.upcoming-item {
+  display: flex;
+  margin-right: 40px;
+}
+.upcoming-item i {
+  font-size: 40px;
+  line-height: 1;
+  margin-right: 20px;
+  color: #84b77c;
+}
+.upcoming-item h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.upcoming-item span {
+  color: #747691;
+  font-size: 14px;
+}
+.upcoming-product-area .countdown {
+  margin-top: 40px;
+}

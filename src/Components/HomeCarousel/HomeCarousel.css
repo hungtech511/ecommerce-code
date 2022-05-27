@@ -1,0 +1,114 @@
+.banner-slider .slider-item-custom {
+  padding: 206px 0;
+  position: relative;
+  z-index: 1;
+}
+.slider-item-custom .firstShape {
+  position: absolute;
+  right: 650px;
+  top: 80px;
+}
+.slider-item-custom .secondShape {
+  position: absolute;
+  right: 270px;
+  top: 350px;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 1;
+}
+.banner-slider .slick-prev,
+.banner-slider .slick-next {
+  z-index: 2;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.banner-slider .slick-prev {
+  left: 30px;
+}
+.banner-slider .slick-next {
+  right: 30px;
+}
+.banner-slider .slick-prev:before,
+.banner-slider .slick-next:before {
+  display: inline-block;
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 20px;
+  color: #10111e;
+  opacity: 1;
+  background: white;
+  padding: 29px;
+  border-radius: 50%;
+  transition: all 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+.banner-slider .slick-prev:before {
+  content: "\f060";
+}
+.banner-slider .slick-next:before {
+  content: "\f061";
+}
+.banner-slider .slick-prev:hover:before,
+.banner-slider .slick-next:hover:before {
+  background: #fe4536;
+  color: #fff;
+  box-shadow: 0 6px 12px 0 rgb(254 69 54 / 40%);
+}
+.banner-slider:hover .slick-prev:before,
+.banner-slider:hover .slick-next:before {
+  opacity: 1;
+  visibility: visible;
+}
+.banner-slider:hover .slick-prev {
+  left: 50px;
+}
+.banner-slider:hover .slick-next {
+  right: 50px;
+}
+.slider-item-custom span {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #747691;
+  display: block;
+  margin-bottom: 20px;
+}
+.slider-item-custom h1 {
+  margin-bottom: 40px;
+}
+.slider-item-custom h2 {
+  font-size: 300px;
+  color: #ededed;
+  font-weight: 500;
+}
+.slider-item-custom .shape-title {
+  position: absolute;
+  top: 24px;
+  z-index: -1;
+  left: 220px;
+}
+@keyframes up-down-animation {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.up-down-animation {
+  animation-name: up-down-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

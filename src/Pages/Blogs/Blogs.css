@@ -1,0 +1,13 @@
+.post-item {
+  margin-bottom: 40px;
+}
+.post-item .box-text {
+  background: #faf9ff;
+  padding: 50px;
+}
+.post-item p {
+  margin-bottom: 30px;
+}
+.App .post-item .box-text .item-meta {
+  margin-bottom: 25px;
+}

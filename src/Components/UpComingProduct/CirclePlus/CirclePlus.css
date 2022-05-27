@@ -1,0 +1,43 @@
+.circle-plus {
+  position: absolute;
+}
+.circle-plus.one {
+  top: 40%;
+  left: 7%;
+}
+.circle-plus.two {
+  bottom: 26%;
+  left: 34%;
+}
+.circle-plus.three {
+  top: 32%;
+  left: 25%;
+}
+.circle-icon {
+  background: #84b77c;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  line-height: 34px;
+  color: #fff;
+}
+.circle-text {
+  background: #fff;
+  padding: 12px;
+  margin-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  position: absolute;
+  z-index: 9;
+  width: 200px;
+}
+.circle-text p {
+  color: #747691;
+}
+.circle-plus:hover > .circle-text {
+  opacity: 1;
+  visibility: visible;
+}

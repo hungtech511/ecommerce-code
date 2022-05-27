@@ -1,0 +1,55 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 17;
+  background-color: #000;
+  opacity: 0.5;
+}
+.modal-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 1.75rem auto;
+  max-width: 70%;
+  z-index: 19;
+}
+.modal-product.fade {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  opacity: 1;
+}
+.modal-content {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  animation: fadeInDown 0.2s ease-in-out;
+}
+.modal-content .product-detail-item {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+.modal-icon {
+  position: absolute;
+  right: -16.5px;
+  top: -10px;
+  border-radius: 50%;
+  background: #fff;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fe4536;
+}

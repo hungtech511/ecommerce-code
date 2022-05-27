@@ -1,0 +1,94 @@
+.bestSeller {
+  margin: 50px 0;
+}
+.bestSeller .slick-initialized .slick-slide {
+  display: grid;
+}
+.bestSeller .slick-initialized .slick-slide > div {
+  min-height: 620px;
+}
+.area-title h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.area-title p {
+  margin: 0;
+}
+.product-tab {
+  margin-left: auto;
+}
+.product-nav li {
+  cursor: pointer;
+}
+.product-nav li a {
+  font-size: 14px;
+  color: #10111e;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+.product-nav li.active {
+  background: #fe4536;
+  border-color: #fe4536;
+}
+.product-nav li.active a {
+  color: #fff;
+}
+.product-nav li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 18px 30px;
+  border: 2px solid #ecedff;
+}
+.product-nav li:last-child {
+  margin-right: 0px;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 1;
+}
+.bestSeller .slick-prev,
+.bestSeller .slick-next {
+  z-index: 2;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.bestSeller .slick-prev {
+  left: -30px;
+}
+.bestSeller .slick-next {
+  right: -80px;
+}
+.bestSeller .slick-prev:before,
+.bestSeller .slick-next:before {
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff1f0;
+  font-size: 13px;
+  height: 100px;
+  width: 30px;
+  color: #10111e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+}
+.bestSeller .slick-prev:before {
+  content: "\f060";
+}
+.bestSeller .slick-next:before {
+  content: "\f061";
+}
+.bestSeller .slick-prev:hover,
+.bestSeller .slick-next:hover,
+.bestSeller .slick-prev:hover:before,
+.bestSeller .slick-next:hover:before {
+  opacity: 1;
+}

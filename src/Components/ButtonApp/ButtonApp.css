@@ -1,0 +1,47 @@
+.btn-app {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #525470;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 22px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.btn-app + .btn-app {
+  margin-left: 30px;
+}
+.btn-app.orange-btn {
+  background: #fe4536;
+  color: #fff;
+}
+.btn-app.orange-btn:hover {
+  background: #84b77c;
+  color: #fff;
+}
+.btn-app.white-btn {
+  background: #fff;
+  color: #525470;
+}
+.btn-app.white-btn:hover {
+  background: #84b77c;
+  color: #fff;
+}
+.btn-app.green-btn {
+  background: #84b77c;
+  color: #fff;
+}
+.btn-app.green-btn:hover {
+  background: #fe4536;
+  color: #fff;
+}

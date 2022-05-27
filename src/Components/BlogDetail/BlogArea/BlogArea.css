@@ -1,0 +1,220 @@
+.blog-area {
+  padding: 100px 0 60px;
+}
+.box-thumb img,
+.post-inner-img img {
+  width: 100%;
+}
+.blog-area .box-thumb {
+  margin-bottom: 35px;
+}
+.blog-area .item-meta {
+  margin-bottom: 20px;
+}
+.item-meta span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #6f7172;
+  margin-right: 20px;
+}
+.item-meta span i {
+  color: #84b77c;
+  margin-right: 2px;
+}
+.item-meta span a {
+  color: #10111e;
+  outline: medium none;
+}
+.post-title {
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.blog-area .post-text > p {
+  margin-bottom: 15px;
+}
+.post-text .post-inner-img {
+  margin: 30px 0;
+}
+.post-text .inner-content {
+  margin-bottom: 60px;
+}
+.post-text h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.blog-share span {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+  color: #062a4d;
+  display: block;
+  margin-bottom: 17px;
+}
+.blog-share-left a {
+  color: #646974;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 2px solid #eaedff;
+  padding: 12px 24px;
+  margin-right: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.blog-share-left a:hover {
+  color: #fff;
+  background: #fe5245;
+}
+.navigation-border {
+  border-top: 1px solid #f7f7f7;
+  overflow: hidden;
+  margin: 40px 0;
+}
+.left-right-page img {
+  width: auto;
+}
+.navigation-post {
+  margin-bottom: 35px;
+}
+.navigation-post span {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+}
+.author {
+  background: #f5f5f5;
+  padding: 0 60px 44px;
+  margin: 80px 0 40px;
+  text-align: center;
+}
+.author .author-image {
+  margin-bottom: 35px;
+}
+.author .author-image img {
+  margin-top: -60px;
+}
+.author .author-text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.author .social-media {
+  margin-top: 6px;
+  margin-bottom: 25px;
+}
+.author .author-text p {
+  font-size: 15px;
+  line-height: 28px;
+}
+.post-comments {
+  border-bottom: 1px solid #eaedff;
+  margin-bottom: 42px;
+  padding-bottom: 46px;
+}
+.blog-comment-title,
+.post-comment-title {
+  margin-bottom: 30px;
+}
+.latest-comments > p {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #000;
+}
+.latest-comments li:first-child .comments-box {
+  border-top: 0;
+  padding-top: 0;
+}
+.latest-comments li .comments-box {
+  padding: 30px 0;
+  display: flex;
+  border-top: 1px solid #eaedff;
+}
+.latest-comments li:last-child .comments-box {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.comments-box .comments-avatar {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.comments-box img {
+  width: 100px;
+}
+.avatar-name h5 {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+.avatar-name span {
+  color: #fe4536;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.comments-text p {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.post-comments-title {
+  margin-bottom: 40px;
+}
+
+.contact-post-form {
+  background: #f5f5f5;
+  padding: 50px;
+}
+.contact-icon {
+  position: relative;
+}
+.contact-icon:after {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 700;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  right: 30px;
+  color: #fe4536;
+  top: 18px;
+}
+.contact-post-form textarea {
+  height: 150px;
+  padding: 30px;
+}
+.contact-post-form input,
+.contact-post-form textarea {
+  font-family: "Rubik", sans-serif;
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 14px;
+  color: #a7a7c1;
+}
+.contact-post-form input {
+  height: 60px;
+  padding: 0 30px;
+}
+.contact-post-form input::placeholder,
+.contact-post-form textarea::placeholder {
+  color: #a7a7c1;
+}
+.contact-message:after {
+  content: "\f303";
+}
+.contact-name:after {
+  content: "\f007";
+}
+.contact-email:after {
+  content: "\f0e0";
+}
+.contact-website:after {
+  content: "\f0ac";
+}

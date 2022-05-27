@@ -1,0 +1,30 @@
+.icon-page {
+  background: #fe4536;
+  color: #fff;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  border-radius: 4px 0 0 4px;
+  right: 0;
+  top: 11rem;
+  position: fixed;
+  z-index: 13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -5px 3px 5px 0 rgb(119 119 119 / 15%);
+}
+.icon-page i {
+  margin-top: 8px;
+}
+.icon-page span {
+  position: absolute;
+  top: -15px;
+  font-size: 14px;
+  right: 5px;
+}
+.icon-page.compare {
+  top: 15rem;
+}

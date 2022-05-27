@@ -1,13 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
+import {
+  BrowserRouter
+} from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import store from './redux/store';
+import { Provider } from 'react-redux'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <SkeletonTheme baseColor="#e2e5e7" highlightColor="#fff">
+        <  BrowserRouter>
+          <ScrollToTop></ScrollToTop>
+          <App />
+        </  BrowserRouter>
+      </SkeletonTheme>
+    </Provider>
   </React.StrictMode>
 );
 

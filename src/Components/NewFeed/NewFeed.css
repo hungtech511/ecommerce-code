@@ -1,0 +1,50 @@
+.new-feed {
+  padding: 95px 0 60px;
+}
+.new-feed .area-title {
+  margin-bottom: 50px;
+}
+.area-title h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.new-feed-item {
+  margin-bottom: 40px;
+}
+.new-feed-item .item-image {
+  margin-bottom: 35px;
+}
+.new-feed-item .item-image img {
+  width: 100%;
+}
+.new-feed .item-meta {
+  margin-bottom: 15px;
+}
+.new-feed .item-meta span {
+  text-transform: uppercase;
+  margin-right: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #747691;
+}
+.new-feed .item-meta span a {
+  color: #fe4536;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.new-feed .item-meta span:first-child i {
+  color: #747691;
+}
+.new-feed .item-meta span:not(:first-child) i {
+  color: #fe4536;
+  margin-right: 2px;
+}
+.new-feed-item img {
+  max-height: 350px;
+}
+.new-feed-item h2 {
+  line-height: 1.4;
+  font-size: 24px;
+  min-height: 110px;
+}

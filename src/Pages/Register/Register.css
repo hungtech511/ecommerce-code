@@ -1,0 +1,57 @@
+.form-area {
+  padding: 100px 0;
+}
+.basic-login {
+  padding: 90px;
+  border: 2px solid #eaedff;
+}
+.basic-login h3 {
+  margin-bottom: 60px;
+  font-size: 30px;
+  text-align: center;
+}
+.basic-login form .text-field {
+  margin-bottom: 20px;
+}
+.basic-login label {
+  color: #222;
+  display: block;
+  margin-bottom: 8px;
+}
+.basic-login input {
+  width: 100%;
+  height: 60px;
+  border: 2px solid #eaedff;
+  color: #6f7172;
+  padding: 0 20px;
+  outline: none;
+}
+.basic-login .required {
+  color: #fe4536;
+}
+.basic-login p {
+  font-size: 80%;
+  color: #dc3545;
+  margin: 4px 0 16px;
+}
+.basic-login .btn-app {
+  width: 100%;
+}
+.or-divide {
+  border-top: 2px solid #eaedff;
+  margin: 40px 0;
+  text-align: center;
+  position: relative;
+}
+.or-divide span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9px;
+  background: #fff;
+  display: inline-block;
+  width: 40px;
+  margin: auto;
+  line-height: 1;
+  font-weight: 500;
+}

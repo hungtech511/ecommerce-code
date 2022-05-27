@@ -1,0 +1,52 @@
+.feature-title {
+  background: url("./page-title.png") no-repeat center center/cover;
+  padding: 103px 0;
+  text-align: center;
+}
+.breadcrumb-text > h1 {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+.breadcrumb-menu {
+  display: inline-block;
+  border-radius: 0;
+  padding: 24px 42px;
+  background: #fff;
+  line-height: 1;
+}
+.breadcrumb-menu li {
+  display: inline-block;
+  position: relative;
+  padding: 0 13px;
+}
+.breadcrumb-menu li:last-child::before {
+  background: #c4c5d5;
+  display: inline-block;
+  left: -4px;
+  padding-bottom: 0;
+  position: absolute;
+  top: -2px;
+  height: 17px;
+  width: 2px;
+  content: "";
+}
+.breadcrumb-menu li a {
+  color: #525470;
+  font-size: 14px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.breadcrumb-menu span {
+  color: #abadc5;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  letter-spacing: 2px;
+}

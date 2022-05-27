@@ -1,0 +1,42 @@
+.top-seller-right {
+  position: relative;
+  text-align: right;
+}
+.seller-box {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.seller-box-content {
+  text-align: left;
+  background: #fff;
+  display: inline-block;
+  margin-top: -80px;
+  padding: 45px 45px 0;
+}
+.seller-box-content h2 {
+  margin-bottom: 15px;
+}
+.seller-box-content-2 {
+  display: inline-block;
+  width: 450px;
+  position: absolute;
+  left: 0;
+  background: #fff;
+  padding: 45px;
+  text-align: left;
+  top: 35px;
+}
+.pro-price {
+  margin-bottom: 25px;
+}
+.pro-price span {
+  font-weight: 500;
+  font-size: 14px;
+  color: #747691;
+  margin-right: 25px;
+}
+.pro-price span.old-price {
+  margin-right: 0;
+  color: #bcbdce;
+  text-decoration: line-through;
+}

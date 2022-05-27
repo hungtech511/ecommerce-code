@@ -1,0 +1,128 @@
+.shop-gallery .product-wrapper {
+  padding: 0;
+}
+.product-block .product-wrapper {
+  display: flex;
+}
+.product-block .product-img img {
+  width: 100%;
+}
+.shop-head {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+.product-showing p {
+  margin: 0;
+  border: 2px solid #f2f2f2;
+  padding: 17px 30px;
+  text-align: center;
+  line-height: 1;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #747691;
+}
+.grid-list {
+  margin-left: auto;
+}
+.grid-list li {
+  display: inline-block;
+}
+.grid-list a {
+  display: block;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6f7172;
+  letter-spacing: 2px;
+  padding: 0;
+  text-transform: uppercase;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #f6f6ff;
+  line-height: 50px;
+  text-align: center;
+}
+.grid-list a.active {
+  color: #fff;
+  background: #fe4536;
+  box-shadow: 0 8px 16px 0 rgb(254 69 54 / 30%);
+}
+.product-block .pro-price {
+  margin: 20px 0;
+}
+.product-block .product-content {
+  padding: 0;
+  flex: 2;
+  padding-left: 30px;
+}
+.product-block p {
+  display: block;
+  color: #7e7e7e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.product-block .product-wrapper .product-wishlist {
+  position: relative;
+  margin-top: 30px;
+}
+.product-col .product-content p {
+  display: none;
+}
+.shop-widget {
+  padding: 35px 40px;
+  border: 4px solid #f9f9f9;
+}
+.shop-widget .widget {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px dashed #ede8ff;
+}
+.shop-widget .widget:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.shop-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.shop-search {
+  position: relative;
+  border: none;
+}
+.shop-search input {
+  outline: none;
+  width: 100%;
+  height: 60px;
+  border: 0;
+  background: #f9f9f9;
+  border-radius: 30px;
+  padding: 0 30px;
+}
+.shop-search button {
+  outline: none;
+  position: absolute;
+  background: #fe4536;
+  border: 0;
+  color: #fff;
+  height: 60px;
+  width: 60px;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 8px 16px 0 rgb(254 69 54 / 30%);
+  box-shadow: 0 8px 16px 0 rgb(254 69 54 / 30%);
+}
+.shop-wrapper .show-error {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}

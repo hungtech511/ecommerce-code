@@ -1,0 +1,25 @@
+.contact-box {
+  border: 1px solid #eaedff;
+  padding: 40px 10px;
+  text-align: center;
+}
+.contact-box i {
+  background: #84b77c;
+  font-size: 40px;
+  height: 150px;
+  width: 150px;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 135px;
+  border: 10px solid #fff;
+  box-shadow: 0 16px 32px 0 rgb(206 226 255 / 40%);
+  margin-bottom: 30px;
+}
+.contact-box h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+.contact-box p {
+  margin: 0;
+  padding: 0 50px;
+}

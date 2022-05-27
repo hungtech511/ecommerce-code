@@ -1,0 +1,33 @@
+.social-media.gray-text a {
+  color: #6f7172;
+  font-size: 18px;
+  margin-left: 22px;
+}
+.social-media.dark-text a {
+  margin: 0 8px;
+  color: #10111e;
+  font-size: 14px;
+}
+.social-media.blue-text a {
+  font-size: 14px;
+  color: #9498b6;
+  margin: 0 5px;
+}
+.social-media a:hover {
+  color: #fe5245;
+}
+.social-media.blue-background a {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  background: #062a4d;
+  line-height: 50px;
+  margin-right: 2px;
+  display: inline-block;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.social-media.blue-background a:hover {
+  background: #fe5245;
+  color: #fff;
+}
