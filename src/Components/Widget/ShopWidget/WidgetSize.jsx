@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 import ecomApi from '../../../Api/ecomApi';
 import { useDispatch } from 'react-redux';
 import { sizeItem } from '../../Slice/SizeSlice';
+import { useSelector } from 'react-redux';
 
 function WidgetSize() {
     const dispatch = useDispatch();
     const [items, setItems] = useState([]);
-    const [storeCheckBox, setStoreCheckBox] = useState([]);
+    const sizeData = useSelector((state) => state.size.sizeData) || []
 
     useEffect(() => {
         const getProduct = async () => {
@@ -35,13 +36,12 @@ function WidgetSize() {
 
     // Get Value From Input Checkbox
     const handleCheck = (event) => {
-        let updatedList = [...storeCheckBox];
+        let updatedList = [...sizeData];
         if (event.target.checked) {
-            updatedList = [...storeCheckBox, event.target.value];
+            updatedList = [...sizeData, event.target.value];
         } else {
-            updatedList.splice(storeCheckBox.indexOf(event.target.value), 1);
+            updatedList.splice(sizeData.indexOf(event.target.value), 1);
         }
-        setStoreCheckBox(updatedList);
         const action = sizeItem(updatedList);
         dispatch(action)
     };
@@ -54,7 +54,7 @@ function WidgetSize() {
             {newArray.length > 0 && newArray.map((item, index) => {
                 return (
                     <div className="checkbox-widget" key={index}>
-                        <input onChange={handleCheck} type="checkbox" id={item} name={item} value={item} />
+                        <input checked={sizeData.indexOf(item) >= 0} onChange={handleCheck} type="checkbox" id={item} name={item} value={item} />
                         <label htmlFor={item}> {item}</label>
                     </div>
                 )

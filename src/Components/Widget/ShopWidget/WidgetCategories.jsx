@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 import ecomApi from '../../../Api/ecomApi';
 import { useDispatch } from 'react-redux';
 import { categoriesItem } from '../../Slice/CategoriesSlice';
+import { useSelector } from 'react-redux';
 
 function WidgetCategories() {
     const dispatch = useDispatch();
     const [items, setItems] = useState([]);
-    const [storeCheckBox, setStoreCheckBox] = useState([]);
+    const categoriesData = useSelector((state) => state.categories.categoriesData) || []
 
     useEffect(() => {
         const getProduct = async () => {
@@ -35,13 +36,12 @@ function WidgetCategories() {
 
     // Get Value From Input Checkbox
     const handleCheck = (event) => {
-        let updatedList = [...storeCheckBox];
+        let updatedList = [...categoriesData];
         if (event.target.checked) {
-            updatedList = [...storeCheckBox, event.target.value];
+            updatedList = [...categoriesData, event.target.value];
         } else {
-            updatedList.splice(storeCheckBox.indexOf(event.target.value), 1);
+            updatedList.splice(categoriesData.indexOf(event.target.value), 1);
         }
-        setStoreCheckBox(updatedList);
         const action = categoriesItem(updatedList);
         dispatch(action)
     };
@@ -52,7 +52,7 @@ function WidgetCategories() {
             {newArray.length > 0 && newArray.map((item, index) => {
                 return (
                     <div className="checkbox-widget" key={index}>
-                        <input onChange={handleCheck} type="checkbox" id={item} name={item} value={item} />
+                        <input checked={categoriesData.indexOf(item) >= 0} onChange={handleCheck} type="checkbox" id={item} name={item} value={item} />
                         <label htmlFor={item}> {item}</label>
                     </div>
                 )

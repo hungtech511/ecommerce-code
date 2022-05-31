@@ -4,7 +4,7 @@ import {
     Link
 } from "react-router-dom";
 import Box from '@mui/material/Box';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import Skeleton from 'react-loading-skeleton'
 import { useDispatch, useSelector } from 'react-redux'
 import { increaseByOne, setTotal, setTotalPrice } from '../Slice/CartSlice'
 import { addToWishlist, removeItem } from '../Slice/WishlistSlice'

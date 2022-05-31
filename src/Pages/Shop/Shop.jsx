@@ -25,7 +25,6 @@ function Shop(props) {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     let filterItem = [];
-    let test = [];
 
     const settings = {
         gridView: 6
@@ -35,7 +34,6 @@ function Shop(props) {
     const brandingArr = useSelector((state) => state.branding.brandingData);
     const sizeArr = useSelector((state) => state.size.sizeData);
     const categoriesArr = useSelector((state) => state.categories.categoriesData);
-
 
     function filterData(tableData, array, props1, props2) {
         // Messy Code
@@ -79,18 +77,12 @@ function Shop(props) {
         }
     }
 
-
-    // chưa lưu localstorage 
-
-
     useEffect(() => {
         const getProduct = async () => {
             const products = await ecomApi.getProducts();
 
             //  Search Item 
-            filterItem = products.data.filter(item => {
-                return item.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
-            });
+            filterItem = products.data.filter(item => item.title.toLowerCase().indexOf(search.toLowerCase()) !== -1);
 
             // Price Range Item
             const searchPrice = products.data.filter(item => {
@@ -118,9 +110,9 @@ function Shop(props) {
         setIsLoading(true)
     }, [search, price, brandingArr, sizeArr, categoriesArr])
 
+
     return (
         <>
-
             <Nav />
             <FeatureTitle title="Our Shop" page="Shop" />
             <Box className="shop-layout" sx={{ padding: '100px 0' }}>

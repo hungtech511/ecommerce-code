@@ -23,6 +23,11 @@ function Login(props) {
     const dispatch = useDispatch();
 
     const [users, setUsers] = useState([])
+    const loginSuccesful = localStorage.getItem('login');
+
+    if (loginSuccesful) {
+        navigate('/')
+    }
 
     useEffect(() => {
         const getUsers = async () => {
@@ -90,7 +95,7 @@ function Login(props) {
                 <Container>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container justifyContent="center">
-                            <Grid item  >
+                            <Grid item md={9} xs={12}>
                                 <Box className="basic-login">
                                     <h3>Login From Here</h3>
                                     <form onSubmit={handleSubmit(onSubmit)}>

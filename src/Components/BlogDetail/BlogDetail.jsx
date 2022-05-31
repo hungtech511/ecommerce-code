@@ -6,6 +6,7 @@ import ecomApi from '../../Api/ecomApi'
 import Footer from '../Footer/Footer';
 import FeatureTitle from '../FeatureTitle/FeatureTitle';
 
+import Skeleton from 'react-loading-skeleton'
 import { Typography } from '@mui/material';
 import BlogArea from './BlogArea/BlogArea';
 
@@ -14,6 +15,7 @@ function BlogDetail(props) {
     const [previousPost, setPreviousPost] = useState([]);
     const [currentPost, setCurrentPost] = useState([]);
     const [nextPost, setNextPost] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const { blogID } = useParams();
 
@@ -27,6 +29,7 @@ function BlogDetail(props) {
         const currentBlog = async () => {
             const current = await ecomApi.getOneBlog(ID)
             setCurrentPost(current.data);
+            setIsLoading(false)
         }
         const previousBlog = async () => {
             let previousID = ID - 1;
@@ -50,9 +53,9 @@ function BlogDetail(props) {
             <Nav></Nav>
             <FeatureTitle title="Blog" page="Blog"></FeatureTitle>
             <>
-                {ID >= totalBlogs.length ?
-                    <Typography variant='h1' sx={{ fontSize: '40px', textAlign: 'center', paddingTop: '100px', paddingBottom: '40px' }}>Post Not Found</Typography> :
-                    <BlogArea currentPost={currentPost} previousPost={previousPost} nextPost={nextPost}></BlogArea>
+                {(ID < totalBlogs.length || isLoading) && <BlogArea isLoading={isLoading} currentPost={currentPost} previousPost={previousPost} nextPost={nextPost}></BlogArea>}
+                {ID >= totalBlogs.length &&
+                    <Typography variant='h1' sx={{ fontSize: '40px', textAlign: 'center', paddingTop: '100px', paddingBottom: '40px' }}>Post Not Found</Typography>
                 }
             </>
 
@@ -60,5 +63,8 @@ function BlogDetail(props) {
         </>
     );
 }
+
+
+
 
 export default BlogDetail;

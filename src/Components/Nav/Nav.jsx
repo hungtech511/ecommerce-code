@@ -156,10 +156,10 @@ function Nav() {
                                                     return (
                                                         <li key={index}>
                                                             <div className="cart-img">
-                                                                <Link to={`details/${item.id - 1}`}><img src={item.product.image} alt="Cart" /></Link>
+                                                                <Link to={`/details/${item.id - 1}`}><img src={item.product.image} alt="Cart" /></Link>
                                                             </div>
                                                             <div className="cart-content">
-                                                                <h3><Link to={`details/${item.id - 1}`}>{item.product.title}</Link></h3>
+                                                                <h3><Link to={`/details/${item.id - 1}`}>{item.product.title}</Link></h3>
                                                                 <div className="cart-price">
                                                                     <span className="new">${item.product.sale ? item.product.salePrice : item.product.price} * {item.quantity}</span> = <span className="new ml-1 ">${item.totalPrice}</span>
                                                                 </div>
@@ -178,6 +178,9 @@ function Nav() {
                                                 </li>
                                                 <li className="go-to-cart">
                                                     <ButtonApp value="shopping cart" direction="/cart" classColor="orange-btn"></ButtonApp>
+                                                </li>
+                                                <li className="go-to-cart">
+                                                    <ButtonApp value="check out" direction="/checkout" classColor="green-btn"></ButtonApp>
                                                 </li>
                                             </ul>
                                         </li>

@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Link } from "react-router-dom";
+import Skeleton from 'react-loading-skeleton'
 
 import './Blogs.css'
 
@@ -21,7 +22,7 @@ import Widget from '../../Components/Widget/Widget';
 
 function Blogs(props) {
 
-
+    const [isLoading, setIsLoading] = useState(true)
     const [totalBlogs, setTotalBlogs] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(2);
@@ -30,6 +31,7 @@ function Blogs(props) {
         const getAllBlog = async () => {
             const blogs = await ecomApi.getBlogs()
             setTotalBlogs(blogs.data);
+            setIsLoading(false);
         }
         getAllBlog();
 
@@ -54,7 +56,12 @@ function Blogs(props) {
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={6}>
                             <Grid item md={8} xs={12}>
-                                {currentPosts.map((blog, index) => {
+                                {isLoading && Array(2).fill(0).map((_, index) => {
+                                    return (
+                                        <BlogsSkeleton key={index} />
+                                    )
+                                })}
+                                {!isLoading && currentPosts.map((blog, index) => {
                                     let comments = blog.comments
                                     let totalComments = comments && Object.keys(comments).length;
                                     return (
@@ -102,6 +109,25 @@ function Blogs(props) {
             <Footer></Footer>
         </>
     );
+}
+
+export const BlogsSkeleton = () => {
+    return (
+        <Box className="post-item">
+            <Skeleton height={478} />
+            <Box sx={{ marginTop: "25px" }} className="product-content">
+                <Box className="pro-cat mb-10">
+                    <Skeleton />
+                </Box>
+                <Skeleton />
+                <Box className="product-meta">
+                    <Box className="pro-price">
+                        <Skeleton />
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+    )
 }
 
 export default Blogs;

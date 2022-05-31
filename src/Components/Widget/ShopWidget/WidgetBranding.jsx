@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 import ecomApi from '../../../Api/ecomApi';
 import { useDispatch } from 'react-redux';
 import { brandingItem } from '../../Slice/BrandingSlice';
+import { useSelector } from 'react-redux';
 
 function WidgetBranding() {
     const dispatch = useDispatch();
     const [items, setItems] = useState([]);
-    const [storeCheckBox, setStoreCheckBox] = useState([]);
+    const brandingData = useSelector((state) => state.branding.brandingData) || []
 
 
     useEffect(() => {
@@ -35,17 +36,17 @@ function WidgetBranding() {
 
 
     // Get Value From Input Checkbox
-    const handleCheck = (event, index) => {
-        let updatedList = [...storeCheckBox];
+    const handleCheck = (event) => {
+        let updatedList = [...brandingData];
         if (event.target.checked) {
-            updatedList = [...storeCheckBox, event.target.value];
+            updatedList = [...brandingData, event.target.value];
         } else {
-            updatedList.splice(storeCheckBox.indexOf(event.target.value), 1);
+            updatedList.splice(brandingData.indexOf(event.target.value), 1);
         }
-        setStoreCheckBox(updatedList);
         const action = brandingItem(updatedList);
         dispatch(action)
     };
+
 
     return (
         <div className="widget">
@@ -53,7 +54,7 @@ function WidgetBranding() {
             {newArray.length > 0 && newArray.map((item, index) => {
                 return (
                     <div className="checkbox-widget" key={index}>
-                        <input className="branding-radio" onChange={handleCheck} type="checkbox" id={item} name="test" value={item} />
+                        <input checked={brandingData.indexOf(item) >= 0} className="branding-radio" onChange={(e) => handleCheck(e)} type="checkbox" id={item} name="test" value={item} />
                         <label htmlFor={item}> {item}</label>
                     </div>
                 )

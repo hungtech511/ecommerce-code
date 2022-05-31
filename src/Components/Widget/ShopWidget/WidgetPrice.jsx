@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { priceItem } from '../../Slice/PriceSlice';
 import Slider from '@mui/material/Slider';
 
@@ -8,7 +8,8 @@ import './ShopWidget.css';
 
 function PriceWidget(props) {
     const dispatch = useDispatch();
-    const [value, setValue] = useState([0, 1000])
+    const valueRange = useSelector((state) => state.price.priceData)
+    const [value, setValue] = useState(valueRange)
 
     const handlePrice = (event, newValue) => {
         setValue(newValue)

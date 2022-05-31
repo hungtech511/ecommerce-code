@@ -31,3 +31,10 @@
   cursor: pointer;
   text-transform: capitalize;
 }
+.widget-recent-skeleton {
+  display: flex;
+  margin-bottom: 25px;
+}
+.widget-recent-skeleton:last-child {
+  margin-bottom: 0;
+}

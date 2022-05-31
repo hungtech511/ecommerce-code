@@ -22,8 +22,13 @@ import ButtonApp from '../../Components/ButtonApp/ButtonApp';
 
 
 function Register(props) {
-
+    let navigate = useNavigate();
     const [users, setUsers] = useState([])
+    const loginSuccesful = localStorage.getItem('login');
+
+    if (loginSuccesful) {
+        navigate('/')
+    }
 
     useEffect(() => {
         const getUsers = async () => {
@@ -33,7 +38,7 @@ function Register(props) {
         getUsers();
     }, [])
 
-    let navigate = useNavigate();
+
     const dispatch = useDispatch()
     const onSubmit = async (data) => {
 

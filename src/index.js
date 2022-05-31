@@ -20,7 +20,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <SkeletonTheme baseColor="#e2e5e7" highlightColor="#fff">
-        <  BrowserRouter basename={process.env.PUBLIC_URL}>
+        <  BrowserRouter>
           <ScrollToTop></ScrollToTop>
           <App />
         </  BrowserRouter>

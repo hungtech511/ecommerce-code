@@ -29,6 +29,7 @@ import ModalView from '../src/Components/ModalView/ModalView';
 import ButtonScrollToTop from './Components/SmallComponents/ButtonScrollToTop/ButtonScrollToTop';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
+import Checkout from './Pages/Checkout/Checkout';
 
 
 
@@ -45,6 +46,7 @@ function App() {
       <LinkToCompare></LinkToCompare>
       <ToastContainer />
       <Routes>
+
         <Route path="/" exact element={<Home />} />
         <Route path="/blogs" exact element={<Blogs />} />
         <Route path="/blog/:blogID" exact element={<BlogDetail />} />
@@ -57,7 +59,7 @@ function App() {
         <Route path="/compare" exact element={<Compare />} />
         <Route path="/register" exact element={<Register />} />
         <Route path="/login" exact element={<Login />} />
-
+        <Route path="/checkout" exact element={<Checkout />} />
       </Routes>
       {modalOpen && <ModalView toggleModal={modalOpen} item={modalData}></ModalView>}
       <ButtonScrollToTop></ButtonScrollToTop>

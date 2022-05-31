@@ -18,7 +18,7 @@
   display: block;
   margin-bottom: 8px;
 }
-.basic-login input {
+.basic-login input:not([type="checkbox"]) {
   width: 100%;
   height: 60px;
   border: 2px solid #eaedff;

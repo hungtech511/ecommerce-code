@@ -1,5 +1,4 @@
 {
-  "homepage": "https://hungtech511.github.io/ecommerce/",
   "name": "ecommerce",
   "version": "0.1.0",
   "private": false,
@@ -30,7 +29,6 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
