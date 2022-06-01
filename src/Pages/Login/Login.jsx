@@ -43,12 +43,11 @@ function Login(props) {
             userName: data.userName,
             password: data.password,
         }
-        let hasUser = users && Object.values(users).some(i => i.userName === userData.userName)
         const action = LoginAction(userData);
         const originalPromiseResult = await dispatch(action);
         const user = unwrapResult(originalPromiseResult);
 
-        if (!hasUser) {
+        if (!user) {
             toast.error(`Username does not exist, please register`, {
                 position: "top-left",
                 theme: 'colored',

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Routes,
   Route
@@ -30,41 +30,50 @@ import ButtonScrollToTop from './Components/SmallComponents/ButtonScrollToTop/Bu
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
 import Checkout from './Pages/Checkout/Checkout';
+import Preloader from './Components/Preloader/Preloader';
 
 
 
 function App() {
-
+  const [isLoading, setIsLoading] = useState(true);
   const modalOpen = useSelector((state) => state.modal.isOpen);
   const modalData = useSelector((state) => state.modal.modalData);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 1000)
+  }, [])
 
   return (
+    <>
+      {isLoading && <Preloader />}
+      {!isLoading &&
+        <div className="App">
+          <LinkToWishlist></LinkToWishlist>
+          <LinkToCompare></LinkToCompare>
+          <ToastContainer />
+          <Routes>
 
-    <div className="App">
-      <LinkToWishlist></LinkToWishlist>
-      <LinkToCompare></LinkToCompare>
-      <ToastContainer />
-      <Routes>
-
-        <Route path="/" exact element={<Home />} />
-        <Route path="/blogs" exact element={<Blogs />} />
-        <Route path="/blog/:blogID" exact element={<BlogDetail />} />
-        <Route path="/shop" exact element={<Shop />} />
-        <Route path="/products" exact element={<Products />} />
-        <Route path="/details/:productID" exact element={<ProductDetail />} />
-        <Route path="/contact" exact element={<Contact />} />
-        <Route path="/cart" exact element={<Cart />} />
-        <Route path="/wishlist" exact element={<Wishlist />} />
-        <Route path="/compare" exact element={<Compare />} />
-        <Route path="/register" exact element={<Register />} />
-        <Route path="/login" exact element={<Login />} />
-        <Route path="/checkout" exact element={<Checkout />} />
-      </Routes>
-      {modalOpen && <ModalView toggleModal={modalOpen} item={modalData}></ModalView>}
-      <ButtonScrollToTop></ButtonScrollToTop>
-    </div>
-
+            <Route path="/" exact element={<Home />} />
+            <Route path="/blogs" exact element={<Blogs />} />
+            <Route path="/blog/:blogID" exact element={<BlogDetail />} />
+            <Route path="/shop" exact element={<Shop />} />
+            <Route path="/products" exact element={<Products />} />
+            <Route path="/details/:productID" exact element={<ProductDetail />} />
+            <Route path="/contact" exact element={<Contact />} />
+            <Route path="/cart" exact element={<Cart />} />
+            <Route path="/wishlist" exact element={<Wishlist />} />
+            <Route path="/compare" exact element={<Compare />} />
+            <Route path="/register" exact element={<Register />} />
+            <Route path="/login" exact element={<Login />} />
+            <Route path="/checkout" exact element={<Checkout />} />
+          </Routes>
+          {modalOpen && <ModalView toggleModal={modalOpen} item={modalData}></ModalView>}
+          <ButtonScrollToTop></ButtonScrollToTop>
+          {/* <Preloader /> */}
+        </div>}
+    </>
   );
 }
 
