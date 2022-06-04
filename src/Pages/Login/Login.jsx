@@ -25,10 +25,12 @@ function Login(props) {
     const [users, setUsers] = useState([])
     const loginSuccesful = localStorage.getItem('login');
 
-    if (loginSuccesful) {
-        navigate('/')
-    }
 
+    useEffect(() => {
+        if (loginSuccesful) {
+            navigate('/')
+        }
+    }, [])
     useEffect(() => {
         const getUsers = async () => {
             const users = await ecomApi.getUsers();

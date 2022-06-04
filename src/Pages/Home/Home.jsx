@@ -43,6 +43,7 @@ function Home() {
             setIsLoading(false)
         }
         showProducts();
+        setIsLoading(true)
     }, [sort])
 
 

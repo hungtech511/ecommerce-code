@@ -19,3 +19,12 @@
   padding: 15px 0;
   text-align: left;
 }
+.shipping ul li {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.shipping ul li label {
+  margin-left: 15px;
+  margin-bottom: 0;
+}
