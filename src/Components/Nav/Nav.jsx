@@ -115,7 +115,7 @@ function Nav() {
                                 }
                             }} item md={7}>
                                 <ul className="nav-list">
-                                    <li><NavLink className={(navData) => (navData.isActive ? 'active' : 'link')}
+                                    <li><NavLink
                                         to="/">Home</NavLink></li>
                                     <li><NavLink to="/shop">Shop</NavLink></li>
                                     <li><NavLink to="/products">Products</NavLink></li>

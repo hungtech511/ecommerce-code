@@ -10,6 +10,7 @@ import Typography from '@mui/material/Grid';
 import './CartTable.css'
 
 import { useSelector } from 'react-redux'
+import ButtonApp from '../ButtonApp/ButtonApp';
 
 function CartTable(props) {
 
@@ -110,12 +111,13 @@ function CartTable(props) {
                             </Box>
                         </Grid>
                         <Grid item md={5}>
-                            <div className="cart-page-total">
+                            <Box sx={{ marginBottom: "25px" }} className="cart-page-total">
                                 <h2>Cart totals</h2>
-                                <ul className="mb-20">
+                                <ul>
                                     <li>Total : <span className="cart-total-number">${totalPrice.toFixed(2)}</span></li>
                                 </ul>
-                            </div>
+                            </Box>
+                            <ButtonApp direction="/checkout" classColor="orange-btn" value="Checkout" />
                         </Grid>
                     </Grid>
                 </Box>

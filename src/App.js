@@ -30,6 +30,7 @@ import ButtonScrollToTop from './Components/SmallComponents/ButtonScrollToTop/Bu
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
 import Checkout from './Pages/Checkout/Checkout';
+import NotFound from './Pages/NotFound/NotFound';
 import Preloader from './Components/Preloader/Preloader';
 
 
@@ -38,6 +39,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const modalOpen = useSelector((state) => state.modal.isOpen);
   const modalData = useSelector((state) => state.modal.modalData);
+
+  let path = window.location.pathname
+  let check = path === "/" || path === "/blogs" || path === "/blog" || path === "/shop" || path === "/products" || path === "/details" || path === "/contact" || path === "/cart" || path === "/wishlist" || path === "/compare" || path === "/register" || path === "/login" || path === "/checkout"
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -50,9 +55,12 @@ function App() {
       {isLoading && <Preloader />}
       {!isLoading &&
         <div className="App">
-          <LinkToWishlist></LinkToWishlist>
-          <LinkToCompare></LinkToCompare>
-          <ToastContainer />
+          {check &&
+            <>
+              <LinkToWishlist></LinkToWishlist>
+              <LinkToCompare></LinkToCompare>
+              <ToastContainer />
+            </>}
           <Routes>
 
             <Route path="/" exact element={<Home />} />
@@ -68,10 +76,10 @@ function App() {
             <Route path="/register" exact element={<Register />} />
             <Route path="/login" exact element={<Login />} />
             <Route path="/checkout" exact element={<Checkout />} />
+            <Route path="*" element={<NotFound />} status={404} />
           </Routes>
           {modalOpen && <ModalView toggleModal={modalOpen} item={modalData}></ModalView>}
-          <ButtonScrollToTop></ButtonScrollToTop>
-          {/* <Preloader /> */}
+          {check && <ButtonScrollToTop></ButtonScrollToTop>}
         </div>}
     </>
   );
