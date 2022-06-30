@@ -59,8 +59,8 @@ function App() {
             <>
               <LinkToWishlist></LinkToWishlist>
               <LinkToCompare></LinkToCompare>
-              <ToastContainer />
             </>}
+          <ToastContainer />
           <Routes>
 
             <Route path="/" exact element={<Home />} />
